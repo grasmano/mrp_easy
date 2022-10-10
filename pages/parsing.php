@@ -1,10 +1,10 @@
 <?php
 
 $parsingResult = [];
+$string = "[TAG_NAME:some_desc]some_data[/TAG_NAME]";
 $showParsingFunctionResult = false;
 
 if (isset($_POST['run_parse_function'])) {
-    $string = "[TAG_NAME:some_desc]some_data[/TAG_NAME]";
     $parsingResult = ParseTags::parse($string);
     $showParsingFunctionResult = true;
 }
